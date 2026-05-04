@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #FFB6D9 0%, #F5E6D3 50%, #FFFAF0 100%);
+  min-height: 100vh;
+}
+
+.card {
+  @apply bg-white bg-opacity-90 rounded-xl shadow-xl p-8 border border-pink-100 hover:shadow-2xl transition-all;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg transition;
+}
+
+.btn-small {
+  @apply bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold py-1 px-3 rounded transition;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 border-2 border-pink-200 rounded-lg focus:outline-none focus:border-purple-500 transition;
+}
+
+.spinner {
+  @apply inline-block animate-spin;
+}
+
+.grid-auto {
+  @apply grid auto-cols-max gap-2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-in-out;
+}
